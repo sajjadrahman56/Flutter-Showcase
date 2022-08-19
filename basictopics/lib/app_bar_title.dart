@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-/*
+
 class app_bar_title extends StatelessWidget {
   const app_bar_title({super.key});
 
@@ -12,10 +12,9 @@ class app_bar_title extends StatelessWidget {
           title: const Text('App Title'),
         ),
         //main body part start from here
-        body: const Text('\n\n Now i am in the Body'),
+        body: const Text(
+            '\n\n Now i am in the main Body\nHere all the functions will be add '),
       ),
     );
   }
 }
-
-*/
