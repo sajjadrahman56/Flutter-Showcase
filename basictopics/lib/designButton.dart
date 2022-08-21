@@ -38,6 +38,10 @@ class _designButton extends State<designButton> {
                   style: ElevatedButton.styleFrom(
                     onPrimary: Color.fromARGB(255, 210, 11, 174),
                     primary: Colors.black,
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 50, vertical: 20),
+                    textStyle: const TextStyle(
+                        fontSize: 25, fontWeight: FontWeight.w500),
                   ),
                   onPressed: () {
                     //print('Someone Click me ');
