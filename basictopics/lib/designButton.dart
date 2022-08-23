@@ -39,7 +39,7 @@ class _designButton extends State<designButton> {
                     onPrimary: Color.fromARGB(255, 210, 11, 174),
                     primary: Colors.black,
                     padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 20),
+                        horizontal: 100, vertical: 50),
                     textStyle: const TextStyle(
                         fontSize: 25, fontWeight: FontWeight.w500),
                   ),
