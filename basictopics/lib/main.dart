@@ -1,6 +1,7 @@
 import 'package:basictopics/secondPages.dart';
 import 'package:flutter/material.dart';
 
+import 'GestureAddOnImage.dart';
 import 'IconAdd.dart';
 
 //import 'navigator1.dart';
@@ -27,5 +28,6 @@ void main() {
   //runApp(imageAdd());   //--------------------------  9th Image add part internet + asset
   // runApp(secondPages()); //------------------------- 10th Navigator page change
   // runApp(navigator1());  //---------------------- 11 th run
-  runApp(IconAdd());
+  // runApp(IconAdd()); // ----------------------------- 112 th
+  runApp(GestureAddOnImage());
 }
