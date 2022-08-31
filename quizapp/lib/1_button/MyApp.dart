@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
+  void answerQuestion() {
+    questionIndex += 1;
+    print('Question : $questionIndex');
+  }
+
   @override
   Widget build(BuildContext context) {
-    var questions = ['what\'s your name ', 'who\'s your mother'];
+    var questions = [
+      'what\'s your name ',
+      'who\'s your mother',
+      'who\'s your father',
+      'who\'s your brother'
+    ];
 
     //if i return MaterialApp at first I should mention home paremeter
     // In the home if i want to see something I shhould mention Scaffold() on the
@@ -26,21 +37,25 @@ class MyApp extends StatelessWidget {
             children: <Widget>[
               Text('The Questions !! '),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('Ansewe 1'),
+                // here i onPressed:(){} replace by answerQuestion method
+                onPressed: answerQuestion,
+                child: Text(questions[questionIndex++]),
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('Ansewe 2'),
+                onPressed: answerQuestion,
+                child: Text(questions[questionIndex++]),
               ),
               ElevatedButton(
-                onPressed: () {},
-                child: Text('Ansewe 3'),
+                // annonymous function no need to a name need for here. it no need define
+                // good for use
+                //
+                onPressed: answerQuestion,
+                child: Text(questions[questionIndex++]),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: answerQuestion,
                 child: Text(
-                  'Ansewe 4',
+                  questions[questionIndex],
                   style: TextStyle(fontSize: 14),
                 ),
                 style: ElevatedButton.styleFrom(
