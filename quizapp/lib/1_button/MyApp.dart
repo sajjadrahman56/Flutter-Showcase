@@ -35,27 +35,27 @@ class MyApp extends StatelessWidget {
               // Text('This is my body', style: TextStyle(height: 3, fontSize: 44)),
               Column(
             children: <Widget>[
-              Text('The Questions !! '),
+              Text(questions[questionIndex]),
               ElevatedButton(
                 // here i onPressed:(){} replace by answerQuestion method
                 onPressed: answerQuestion,
-                child: Text(questions[questionIndex++]),
+                child: Text('Answer 1'),
               ),
               ElevatedButton(
                 onPressed: answerQuestion,
-                child: Text(questions[questionIndex++]),
+                child: Text('Answer 2'),
               ),
               ElevatedButton(
                 // annonymous function no need to a name need for here. it no need define
                 // good for use
                 //
                 onPressed: answerQuestion,
-                child: Text(questions[questionIndex++]),
+                child: Text('Answer 3'),
               ),
               ElevatedButton(
                 onPressed: answerQuestion,
                 child: Text(
-                  questions[questionIndex],
+                  'Answer 4 ',
                   style: TextStyle(fontSize: 14),
                 ),
                 style: ElevatedButton.styleFrom(
