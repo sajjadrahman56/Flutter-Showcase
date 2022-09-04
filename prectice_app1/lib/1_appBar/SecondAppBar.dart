@@ -45,6 +45,21 @@ class SecondAppBar extends StatelessWidget {
               ),
               color: Color.fromARGB(255, 83, 9, 201),
             ),
+            IconButton(
+              tooltip: 'Ami kala',
+              splashRadius: 20,
+              splashColor: Color.fromARGB(255, 16, 15, 15),
+              padding: EdgeInsets.zero,
+              onPressed: () {
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(const SnackBar(content: Text("no me")));
+              },
+              icon: Icon(
+                Icons.man,
+                size: 40,
+              ),
+              color: Color.fromARGB(255, 0, 0, 0),
+            ),
           ],
         ),
       ),
