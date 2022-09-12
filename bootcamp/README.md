@@ -1,6 +1,7 @@
 # bootcamp
 
-A new Flutter project.
+A new Flutter project learning from bootcamp arranged by LU IEEE CS 
+- This journey is 3 month longs 
 
 ## Getting Started
 
