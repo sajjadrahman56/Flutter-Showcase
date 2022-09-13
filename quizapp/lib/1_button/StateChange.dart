@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../answer.dart';
 import './question.dart';
 
 class StateChange extends StatefulWidget {
@@ -49,7 +50,11 @@ class _StateChangeState extends State<StateChange> {
             children: <Widget>[
               /// QUESTION is class Stateless . I just uesed it instead of Text()
               Question(questions[_questionIndex]),
-              ElevatedButton(
+              Answer(_answerQuestion),
+              Answer(_answerQuestion),
+              Answer(_answerQuestion),
+              Answer(_answerQuestion)
+              /* ElevatedButton(
                 // here i onPressed:(){} replace by answerQuestion method
                 onPressed: _answerQuestion,
                 child: Text('Answer 1'),
@@ -79,7 +84,7 @@ class _StateChangeState extends State<StateChange> {
                   side: BorderSide(
                       color: Colors.yellow, width: 5), // nice button broder
                 ),
-              ),
+              ),*/
             ],
           )),
     );
