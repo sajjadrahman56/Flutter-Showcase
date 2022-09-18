@@ -23,10 +23,22 @@ class _StateChangeState extends State<StateChange> {
   @override
   Widget build(BuildContext context) {
     var questions = [
-      'what\'s your name ',
-      'who\'s your mother',
-      'who\'s your father',
-      'who\'s your brother'
+      {
+        'questionText': 'what\'s your name ',
+        'answer': ['Ami', 'Tumi', 'she', 'he'],
+      },
+      {
+        'questionText': 'who\'s your mother',
+        'answer': ['Black 44', 'Red 44 ', 'Green 44', 'White 44'],
+      },
+      {
+        'questionText': 'who\'s your father',
+        'answer': ['Rafiq', 'Sami', 'Galib', 'Nayeem'],
+      },
+      {
+        'questionText': 'who\'s your brother',
+        'answer': ['jobbar', 'karim', 'goffar', 'hehe'],
+      },
     ];
 
     //if i return MaterialApp at first I should mention home paremeter
@@ -49,11 +61,20 @@ class _StateChangeState extends State<StateChange> {
               Column(
             children: <Widget>[
               /// QUESTION is class Stateless . I just uesed it instead of Text()
-              Question(questions[_questionIndex]),
-              Answer(_answerQuestion),
-              Answer(_answerQuestion),
-              Answer(_answerQuestion),
-              Answer(_answerQuestion)
+              Question(
+                questions[_questionIndex]['questionText'],
+              ),
+
+              ///... three dot call  wrap
+              ...(questions[_questionIndex]['answer'] as List<String>)
+                  .map((answer) {
+                return Answer(_answerQuestion, answer);
+              }).toList()
+
+              // Answer(_answerQuestion),
+              // Answer(_answerQuestion),
+              // Answer(_answerQuestion),
+              // Answer(_answerQuestion)
               /* ElevatedButton(
                 // here i onPressed:(){} replace by answerQuestion method
                 onPressed: _answerQuestion,
