@@ -8,74 +8,100 @@ class StateChange extends StatefulWidget {
 }
 
 class _StateChangeState extends State<StateChange> {
+  final questions = const [
+    {
+      'questionText': 'what\'s your name ',
+      'answer': ['Ami', 'Tumi', 'she', 'he'],
+    },
+    {
+      'questionText': 'who\'s your mother',
+      'answer': ['Black 44', 'Red 44 ', 'Green 44', 'White 44'],
+    },
+    {
+      'questionText': 'who\'s your father',
+      'answer': ['Rafiq', 'Sami', 'Galib', 'Nayeem'],
+    },
+    {
+      'questionText': 'who\'s your brother',
+      'answer': ['jobbar', 'karim', 'goffar', 'hehe'],
+    },
+  ];
   var _questionIndex = 0;
 
   void _answerQuestion() {
     setState(() {
       _questionIndex += 1;
-      if (_questionIndex == 3) {
-        _questionIndex % 4;
-      }
+      // if (_questionIndex == 3) {
+      //   _questionIndex % 4;
+      // }
     });
     print('Question : $_questionIndex');
+    if (_questionIndex < questions.length) {
+      print("we have more questions");
+    } else
+      print("No more questions");
   }
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      {
-        'questionText': 'what\'s your name ',
-        'answer': ['Ami', 'Tumi', 'she', 'he'],
-      },
-      {
-        'questionText': 'who\'s your mother',
-        'answer': ['Black 44', 'Red 44 ', 'Green 44', 'White 44'],
-      },
-      {
-        'questionText': 'who\'s your father',
-        'answer': ['Rafiq', 'Sami', 'Galib', 'Nayeem'],
-      },
-      {
-        'questionText': 'who\'s your brother',
-        'answer': ['jobbar', 'karim', 'goffar', 'hehe'],
-      },
-    ];
+    /// though it is scope for this {} but i also want to count golobally index
+    /// such as when I reach last index , I could not get CRASH the app
+
+    // const questions = [
+    //   {
+    //     'questionText': 'what\'s your name ',
+    //     'answer': ['Ami', 'Tumi', 'she', 'he'],
+    //   },
+    //   {
+    //     'questionText': 'who\'s your mother',
+    //     'answer': ['Black 44', 'Red 44 ', 'Green 44', 'White 44'],
+    //   },
+    //   {
+    //     'questionText': 'who\'s your father',
+    //     'answer': ['Rafiq', 'Sami', 'Galib', 'Nayeem'],
+    //   },
+    //   {
+    //     'questionText': 'who\'s your brother',
+    //     'answer': ['jobbar', 'karim', 'goffar', 'hehe'],
+    //   },
+    // ];
 
     //if i return MaterialApp at first I should mention home paremeter
     // In the home if i want to see something I shhould mention Scaffold() on the
     //home
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-            title: Text('Quiz App',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    height: 2,
-                    fontSize: 18)),
-          ),
-          body:
-              // for styling text color we use Text widets inside TextStyle
-              //TestStyle widgtes whose paremeter is style :
-              // Text('This is my body', style: TextStyle(height: 3, fontSize: 44)),
-              Column(
-            children: <Widget>[
-              /// QUESTION is class Stateless . I just uesed it instead of Text()
-              Question(
-                questions[_questionIndex]['questionText'],
-              ),
+        appBar: AppBar(
+          title: Text('Quiz App',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Color.fromARGB(255, 0, 0, 0),
+                  height: 2,
+                  fontSize: 18)),
+        ),
+        body:
+            // for styling text color we use Text widets inside TextStyle
+            //TestStyle widgtes whose paremeter is style :
+            // Text('This is my body', style: TextStyle(height: 3, fontSize: 44)),
+            _questionIndex < questions.length
+                ? Column(
+                    children: <Widget>[
+                      /// QUESTION is class Stateless . I just uesed it instead of Text()
+                      Question(
+                        questions[_questionIndex]['questionText'],
+                      ),
 
-              ///... three dot call  wrap
-              ...(questions[_questionIndex]['answer'] as List<String>)
-                  .map((answer) {
-                return Answer(_answerQuestion, answer);
-              }).toList()
+                      ///... three dot call  wrap
+                      ...(questions[_questionIndex]['answer'] as List<String>)
+                          .map((answer) {
+                        return Answer(_answerQuestion, answer);
+                      }).toList()
 
-              // Answer(_answerQuestion),
-              // Answer(_answerQuestion),
-              // Answer(_answerQuestion),
-              // Answer(_answerQuestion)
-              /* ElevatedButton(
+                      // Answer(_answerQuestion),
+                      // Answer(_answerQuestion),
+                      // Answer(_answerQuestion),
+                      // Answer(_answerQuestion)
+                      /* ElevatedButton(
                 // here i onPressed:(){} replace by answerQuestion method
                 onPressed: _answerQuestion,
                 child: Text('Answer 1'),
@@ -106,8 +132,12 @@ class _StateChangeState extends State<StateChange> {
                       color: Colors.yellow, width: 5), // nice button broder
                 ),
               ),*/
-            ],
-          )),
+                    ],
+                  )
+                : Center(
+                    child: Text('Yeah , you did it !'),
+                  ),
+      ),
     );
   }
 }
