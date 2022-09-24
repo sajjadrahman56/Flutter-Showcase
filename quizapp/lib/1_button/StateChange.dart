@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import '../answer.dart';
-import './question.dart';
+import 'package:quizapp/quiz.dart';
+
+import '../result.dart';
 
 class StateChange extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class StateChange extends StatefulWidget {
 }
 
 class _StateChangeState extends State<StateChange> {
-  final questions = const [
+  final _questions = const [
     {
       'questionText': 'what\'s your name ',
       'answer': ['Ami', 'Tumi', 'she', 'he'],
@@ -36,7 +37,7 @@ class _StateChangeState extends State<StateChange> {
       // }
     });
     print('Question : $_questionIndex');
-    if (_questionIndex < questions.length) {
+    if (_questionIndex < _questions.length) {
       print("we have more questions");
     } else
       print("No more questions");
@@ -83,60 +84,13 @@ class _StateChangeState extends State<StateChange> {
             // for styling text color we use Text widets inside TextStyle
             //TestStyle widgtes whose paremeter is style :
             // Text('This is my body', style: TextStyle(height: 3, fontSize: 44)),
-            _questionIndex < questions.length
-                ? Column(
-                    children: <Widget>[
-                      /// QUESTION is class Stateless . I just uesed it instead of Text()
-                      Question(
-                        questions[_questionIndex]['questionText'],
-                      ),
-
-                      ///... three dot call  wrap
-                      ...(questions[_questionIndex]['answer'] as List<String>)
-                          .map((answer) {
-                        return Answer(_answerQuestion, answer);
-                      }).toList()
-
-                      // Answer(_answerQuestion),
-                      // Answer(_answerQuestion),
-                      // Answer(_answerQuestion),
-                      // Answer(_answerQuestion)
-                      /* ElevatedButton(
-                // here i onPressed:(){} replace by answerQuestion method
-                onPressed: _answerQuestion,
-                child: Text('Answer 1'),
-              ),
-              ElevatedButton(
-                onPressed: _answerQuestion,
-                child: Text('Answer 2'),
-              ),
-              ElevatedButton(
-                // annonymous function no need to a name need for here. it no need define
-                // good for use
-                //
-                onPressed: _answerQuestion,
-                child: Text('Answer 3'),
-              ),
-              ElevatedButton(
-                onPressed: _answerQuestion,
-                child: Text(
-                  'Answer 4 ',
-                  style: TextStyle(fontSize: 14),
-                ),
-                style: ElevatedButton.styleFrom(
-                  foregroundColor: Colors.red,
-                  backgroundColor: Color.fromARGB(255, 42, 180, 49),
-                  elevation: 20,
-                  shadowColor: Colors.black, // button shadow add
-                  side: BorderSide(
-                      color: Colors.yellow, width: 5), // nice button broder
-                ),
-              ),*/
-                    ],
+            _questionIndex < _questions.length
+                ? Quiz(
+                    answerQuestions: _answerQuestion,
+                    questionIndex: _questionIndex,
+                    questions: _questions,
                   )
-                : Center(
-                    child: Text('Yeah , you did it !'),
-                  ),
+                : Result(),
       ),
     );
   }
