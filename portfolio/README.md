@@ -1,4 +1,10 @@
 # portfolio
+-- Task given by LUCSFB
+# output 
+-------------------------------------------------------------
+This is the ouput of this project . Very Basic UI 
+
+![LUCSFB2222](https://user-images.githubusercontent.com/67529599/193406141-28e0340f-1b99-4acb-986c-87eab3cf7e43.JPG)
 
 A new Flutter project.
 
