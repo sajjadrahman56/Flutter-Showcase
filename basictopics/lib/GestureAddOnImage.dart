@@ -106,7 +106,8 @@ class _MyAppExtensionsState extends State<MyAppExtensions> {
                 child: _isClick
                     ? Image.asset('images/meAndTalha.jpeg')
                     : Image.network(
-                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJV5RpAqsxQdCUQ9spe5IDCpqBqNyRSMNubHHydvXh-Xp-wtY4_9zj84B-Pa5dSL68j9c&usqp=CAU')),
+                        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJV5RpAqsxQdCUQ9spe5IDCpqBqNyRSMNubHHydvXh-Xp-wtY4_9zj84B-Pa5dSL68j9c&usqp=CAU'),
+              ),
         //Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnzfN2a0UjuIS-tnDxfxAk6tKAY-q8zC99mQ&usqp=CAU'),//image add from internet
       ),
 

@@ -1,8 +1,11 @@
 import 'package:basictopics/secondPages.dart';
 import 'package:flutter/material.dart';
 
+import 'Class_07/my_app.dart';
 import 'GestureAddOnImage.dart';
 import 'IconAdd.dart';
+import 'Row_Column_/row-col2.dart';
+import 'Row_Column_/row_col_01.dart';
 
 //import 'navigator1.dart';
 
@@ -29,5 +32,7 @@ void main() {
   // runApp(secondPages()); //------------------------- 10th Navigator page change
   // runApp(navigator1());  //---------------------- 11 th run
   // runApp(IconAdd()); // ----------------------------- 112 th
-  runApp(GestureAddOnImage());
+  // runApp(GestureAddOnImage()); //---------------------- 13
+  runApp(row_col_01()); //basic row col MyApp
+  ///runApp(MyApp());
 }
