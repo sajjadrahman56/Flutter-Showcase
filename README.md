@@ -1,9 +1,17 @@
-# mobile-applications
-In this repo , I will share each and everything that I learn through various resources about Flutter (dart ) 
+# flutter-applications
+In this repo , I will share each and everything that I am currently learning through various resources about Flutter ( dart ) 
 
-# Basic Topics 
-----------------
-content link : ---- https://github.com/sajjad-njr/mobile-applications/tree/main/basictopics/lib
+ # Full Project List 
+  <a href="https://github.com/sajjad-njr/flutter-applications"> ALL PROJECTS </a>
 
-# Portfolio ( UI design only )
-- ` ` https://github.com/sajjad-njr/mobile-applications/tree/main/portfolio
+# APP LIST
+
+
+<ul type = "square">
+   <li> <a href="https://github.com/sajjad-njr/flutter-applications/tree/main/portfolio"> Portfolio Design </a>  </li>
+   <li>  <a href="https://github.com/sajjad-njr/flutter-applications/tree/main/form_create"> Form Create </a> </li>
+</ul>
+
+ 
+
+
