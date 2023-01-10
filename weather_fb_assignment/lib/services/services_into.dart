@@ -7,9 +7,11 @@ import 'package:http/http.dart' as http;
 import '../model/model_data.dart';
 
 class WeatherAPiClinet {
-  Future<Weather>? getCurrentWeather1(String? lati, String? loni) async {
+  Future<Weather>? getCurrentWeather1(String? lati, String? loni ) async {
+    //insert your api 
+    //var api =74e7c3a1e8f06f40b24cc4a81b032***  //hints=456kjld3a***
     var endpoint = Uri.parse(
-        "https://api.openweathermap.org/data/2.5/weather?lat=$lati&lon=$loni&appid=74e7c3a1e8f06f40b24cc4a81b032d3a&units=metric");
+        "https://api.openweathermap.org/data/2.5/weather?lat=$lati&lon=$loni&appid=$api&units=metric");
     var response = await http.get(endpoint);
 
     var body = jsonDecode(response.body);

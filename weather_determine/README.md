@@ -1,6 +1,17 @@
 # weather_determine
 
-A new Flutter project.
+very simple weather api project 
+
+#features 
+<div>
+  <li>
+  Api from Open Weather 
+  </li>
+  <li>
+  Lat and Lan 
+  </li>
+  
+</div>
 
 ## Getting Started
 
