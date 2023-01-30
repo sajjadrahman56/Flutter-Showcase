@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../model/model_data.dart';
+import '../services/geo_location_get.dart';
 import '../services/services_into.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -25,14 +26,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() {
     super.initState();
     // button();
-    client.getCurrentWeather1("23.8103", "90.4125");
+    // client.getCurrentWeather1("23.8103", "90.4125");
   }
 
   Weather? data;
   // ignore: non_constant_identifier_names
   Future<void> getData() async {
-    data = await client.getCurrentWeather1(
-        "23.8103", "90.4125"); // latitude = "23.8103";
+    // data = await client.getCurrentWeather1(  "23.8103", "90.4125"); // latitude = "23.8103";
     //longitude = "90.4125";
   }
 
@@ -44,10 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: FutureBuilder(
-        future: getData(),
+        future: getLoca(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             //here we will display our data
+
             mainFrame();
           } else if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(
@@ -59,9 +60,36 @@ class _MyHomePageState extends State<MyHomePage> {
             );
           }
           return Container(
-            child: Text("Hello Sakib"),
+            child: drop_button(),
           );
         },
+      ),
+    );
+  }
+
+  Widget PrintNameOfData(dynamic cityName, dynamic temp) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              color: Colors.amber,
+              child: Text("${cityName}"),
+            ),
+            SizedBox(
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color: Color.fromARGB(255, 185, 25, 179),
+              child: Text("${temp}"),
+            ),
+          ],
+        ),
       ),
     );
   }
