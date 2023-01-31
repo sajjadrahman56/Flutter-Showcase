@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../model/model_data.dart';
+import '../../../model/weather/model_data.dart';
 
 class WeatherAPiClinet {
   static Future<Weather>? getCurrentWeather1(double? lati, double? loni) async {

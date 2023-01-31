@@ -4,11 +4,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:geolocator/geolocator.dart';
-import 'package:weather_fb_assignment/services/services_into.dart';
+import 'package:weather_fb_assignment/services/api/weather-api/services_into.dart';
 import 'package:get/get.dart';
 
-import '../Assignment_3/home_page.dart';
-import '../Assignment_3/home_page_o_pass_data.dart';
+import '../../../Assignment_3/home_page.dart';
+import '../../../Assignment_3/home_page_o_pass_data.dart';
 
 class GeoFunctionCall extends StatefulWidget {
   const GeoFunctionCall({super.key});
