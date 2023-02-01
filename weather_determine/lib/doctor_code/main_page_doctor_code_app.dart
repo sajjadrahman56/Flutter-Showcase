@@ -25,13 +25,13 @@ class _main_page_doctor_codeState extends State<main_page_doctor_code> {
   @override
   void initState() {
     super.initState();
-    client.getCurrentWeather("35.8694", "75.8049");
+    client.getCurrentWeather("24.894930", "91.868706");
   }
 
   Weather? data;
   // ignore: non_constant_identifier_names
   Future<void> getData() async {
-    data = await client.getCurrentWeather("35.8694", "75.8049");
+    data = await client.getCurrentWeather("24.894930", "91.868706");
   }
 
   @override

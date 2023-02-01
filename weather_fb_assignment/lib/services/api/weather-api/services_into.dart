@@ -6,7 +6,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import '../model/model_data.dart';
+import '../../../model/weather/model_data.dart';
 
 class WeatherAPiClinet {
   static Future<Weather>? getCurrentWeather1(double? lati, double? loni) async {
@@ -24,37 +24,8 @@ class WeatherAPiClinet {
     print(weather.cityName);
     print(weather.temp);
 
-    print(body);
-    //PrintNameOfData(weather.cityName, weather.temp);
+    //print(body);
 
-    //return Weather.fromJson(body);
     return weather;
   }
-}
-
-Widget PrintNameOfData(dynamic cityName, dynamic temp) {
-  return Scaffold(
-    body: Center(
-      child: Column(
-        children: [
-          Container(
-            height: 100,
-            width: 100,
-            color: Colors.amber,
-            child: Text("${cityName}"),
-          ),
-          SizedBox(
-            height: 100,
-            width: 100,
-          ),
-          Container(
-            height: 100,
-            width: 100,
-            color: Color.fromARGB(255, 185, 25, 179),
-            child: Text("${temp}"),
-          ),
-        ],
-      ),
-    ),
-  );
 }
