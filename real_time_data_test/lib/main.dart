@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             ElevatedButton(
                 onPressed: () {
-                  Get.to(FetchData());
+                  Get.to(() => FetchData());
                 },
                 child: Text("Fetch Data ")),
             SizedBox(
@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             ElevatedButton(
                 onPressed: () {
-                  Get.to(InsertData());
+                  Get.to(() => InsertData());
                 },
                 child: Text("Insert Data  ")),
           ],

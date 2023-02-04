@@ -66,7 +66,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
               GestureDetector(
@@ -92,7 +92,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
               GestureDetector(
@@ -118,7 +118,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
               GestureDetector(
@@ -144,7 +144,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
               GestureDetector(
@@ -170,7 +170,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
               GestureDetector(
@@ -196,7 +196,7 @@ class _MyGridScreenState extends State<MyGridScreen> {
                   ),
                   onTap: () {
                     setState(() {
-                      Get.to(MyHomePage(title: 'Flutter Demo Home Page'));
+                      Get.to(() => MyHomePage(title: 'Flutter Demo Home Page'));
                     });
                   }),
             ],
