@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 TextStyle titleFont =
     const TextStyle(fontWeight: FontWeight.w600, fontSize: 18.0);
-Widget additionalInformation(
-    String wind, String humidity, String pressure, String feels_like) {
+Widget additionalInformation(String wind, String humidity, String pressure,
+    String feels_like, dynamic id) {
   return Container(
       width: double.infinity,
       padding: EdgeInsets.all(20),
@@ -47,6 +47,13 @@ Widget additionalInformation(
                     SizedBox(
                       height: 20,
                     ),
+                    Text(
+                      "ID  ",
+                      style: titleFont,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
                   ]),
               Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -75,6 +82,13 @@ Widget additionalInformation(
                     ),
                     Text(
                       "$feels_like ",
+                      style: titleFont,
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "$id ",
                       style: titleFont,
                     ),
                     SizedBox(

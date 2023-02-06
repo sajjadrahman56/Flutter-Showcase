@@ -68,8 +68,12 @@ class _main_page_doctor_codeState extends State<main_page_doctor_code> {
                   const Text("Additional weather information  ",
                       style: TextStyle(fontSize: 21)),
                   const Divider(),
-                  additionalInformation("${data!.wind}", "${data!.humidity}",
-                      "${data!.pressure}", "${data!.feels_like}"),
+                  additionalInformation(
+                      "${data!.wind}",
+                      "${data!.humidity}",
+                      "${data!.pressure}",
+                      "${data!.feels_like}",
+                      "${data!.id}"),
                   // now API Connections Established
                 ]);
           } else if (snapshot.connectionState == ConnectionState.waiting) {
