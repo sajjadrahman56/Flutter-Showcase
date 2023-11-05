@@ -1,3 +1,29 @@
+<!--
+## Basic Apps
+
+| App Name | Description |
+| -------- | ----------- |
+| App 1    | This is a basic Flutter app... |
+| App 2    | This is another basic Flutter app... |
+| ...      | ... |
+
+## API Apps
+
+| App Name | Description |
+| -------- | ----------- |
+| App 1    | This is a Flutter app that uses an API... |
+| App 2    | This is another Flutter app that uses an API... |
+| ...      | ... |
+
+## E-commerce Apps
+
+| App Name | Description |
+| -------- | ----------- |
+| App 1    | This is a Flutter e-commerce app... |
+| App 2    | This is another Flutter e-commerce app... |
+| ...      | ... |
+
+-->
 ---
 # Flutter Applications
 
