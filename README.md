@@ -1,4 +1,27 @@
-<!--
+# Flutter Showcase
+
+Welcome to the FlutterFlutter Showcase repository!  
+
+## Basic Apps
+- - -
+<body>
+   <table>
+   <tr>
+   <td width="1"></td>
+    <td><img src="https://github.com/sajjadrahman56/Flutter-Showcase/assets/67529599/3ab90cb4-99cc-41c9-92f4-62f919b09cde" width="210" height="300"></td>
+    <td width="1"></td> 
+   </tr>
+   <tr>
+      <td width="1">1</td>
+      <td align='center'><a href="https://www.google.com">Rich Text</a></td>
+      <td width="1"></td> 
+   </tr>
+
+</table>
+</body>
+
+ <!--
+
 ## Basic Apps
 
 | App Name | Description |
@@ -11,7 +34,8 @@
 
 | App Name | Description |
 | -------- | ----------- |
-| App 1    | This is a Flutter app that uses an API... |
+| App 1    | <img src="https://github.com/sajjadrahman56/Flutter-Showcase/assets/67529599/3ab90cb4-99cc-41c9-92f4-62f919b09cde" width="210" height="300">
+<img src="https://github.com/sajjadrahman56/Flutter-Showcase/assets/67529599/3ab90cb4-99cc-41c9-92f4-62f919b09cde" width="210" height="300">|
 | App 2    | This is another Flutter app that uses an API... |
 | ...      | ... |
 
@@ -23,11 +47,10 @@
 | App 2    | This is another Flutter e-commerce app... |
 | ...      | ... |
 
+
 -->
 ---
-# Flutter Applications
-
-Welcome to the Flutter Applications repository! This repository is open for contributions as part of Hacktoberfest 2023. We encourage developers from all backgrounds to contribute and collaborate on Flutter applications.
+<!--
 
 ## How to Contribute
 
