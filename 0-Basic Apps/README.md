@@ -1,4 +1,11 @@
 # 0-Basic Apps
+Follow these simple steps to use the `base_app`:
+- [ ] Clone the repository.
+- [ ] Navigate to the `base_app` directory.
+- [ ] Replace the existing `lib` directory with any of the following folder/app name:
+- [ ] You're done! Enjoy exploring the app.
+
+## Apps SS
 <body>
   
    <table>
@@ -9,7 +16,7 @@
    </tr>
    <tr>
       <td width="1">1</td>
-      <td align='center'><a href="https://www.google.com">Rich Text</a></td>
+      <td align='center'><a href="https://github.com/sajjadrahman56/Flutter-Showcase/tree/main/0-Basic%20Apps/1-simple-screen-different-text">Rich Text</a></td>
       <td width="1"></td> 
    </tr>
      
